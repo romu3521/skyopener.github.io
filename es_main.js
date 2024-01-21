@@ -12794,7 +12794,7 @@ const Db = (t) => {
     width: "100px",
     height: "100px",
     position: "absolute",
-    backgroundImage: 'url("/dist/yajirushi.png")',
+    backgroundImage: 'url("./dist/yajirushi.png")',
     backgroundSize: "cover",
     zIndex: 1111,
     bottom: "30px"
