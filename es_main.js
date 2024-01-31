@@ -12848,10 +12848,10 @@ const d2 = (t) => {
     ] }),
     /* @__PURE__ */ E.jsx(fe.div, { className: "colormass", style: { pointerEvents: "none", zIndex: 500, opacity: u.lighting, backgroundColor: "rgba(1,1,1,.4)", ...s, display: e[0] ? "none" : "block" } }),
     /* @__PURE__ */ E.jsx(fe.div, { className: "base2", style: { pointerEvents: "none", width: "100%", left: "0px", top: "3em", position: "fixed", margin: "0px", padding: "0px", zIndex: 1501, height: i, overflow: "hidden" }, children: /* @__PURE__ */ E.jsxs("div", { style: { zIndex: 501, margin: "0px", display: "inline-block", verticalAlign: "top", height: "100%", overflow: "hidden", position: "relative", pointerEvents: "none" }, children: [
-      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "/", children: "ご案内" }),
-      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "/", children: "活動紹介" }),
+      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "ご案内" }),
+      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "活動紹介" }),
       /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./irai", children: "依頼報告" }),
-      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "/", children: "スペシャルサンクス" })
+      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "スペシャルサンクス" })
     ] }) })
   ] });
 }, RP = (t) => {
