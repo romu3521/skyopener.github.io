@@ -12916,7 +12916,7 @@ const d2 = (t) => {
   ] }) });
 };
 yi.registerPlugin(me);
-const q1 = S.createContext(null), OP = (t) => {
+const q1 = S.createContext(null), K1 = (t) => {
   const e = S.useState(!1), n = S.useRef(null);
   var r = window.innerWidth;
   S.useEffect(() => {
@@ -12929,7 +12929,7 @@ const q1 = S.createContext(null), OP = (t) => {
   return S.useContext(q1), /* @__PURE__ */ E.jsx(q1.Provider, { value: { viewent: i }, children: /* @__PURE__ */ E.jsxs("div", { className: "base", ref: n, style: { overflow: "hidden", padding: "0px", margin: "0px", textAlign: "center" }, children: [
     /* @__PURE__ */ E.jsx(h2, { phonestate: e }),
     /* @__PURE__ */ E.jsx("div", { style: { width: "100%", height: "30vh" } }),
-    /* @__PURE__ */ E.jsx(DP, { phonestate: e }),
+    /* @__PURE__ */ E.jsx(OP, { phonestate: e }),
     /* @__PURE__ */ E.jsx("style", { children: `
    @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
    @import url('https://fonts.googleapis.com/css?family=DotGothic16');
@@ -12947,7 +12947,7 @@ const q1 = S.createContext(null), OP = (t) => {
 
 ` })
   ] }) });
-}, DP = (t) => {
+}, OP = (t) => {
   const e = {
     display: "inline-block",
     textAlign: "left",
@@ -13102,7 +13102,7 @@ const q1 = S.createContext(null), OP = (t) => {
     /* @__PURE__ */ E.jsx("br", {}),
     /* @__PURE__ */ E.jsx("br", {})
   ] });
-}, AP = (t) => {
+}, DP = (t) => {
   const e = S.useRef(null), n = S.useState(!1), [r, i] = S.useState([window.innerWidth, window.innerHeight]);
   S.useEffect(() => {
     window.setTimeout(() => {
@@ -13129,17 +13129,17 @@ const q1 = S.createContext(null), OP = (t) => {
       overflow: "hidden",
       whiteSpace: "nowrap"
     }, children: [
-      /* @__PURE__ */ E.jsx(LP, { ref: a, imgurl: l, width: r[0], height: r[0], setmergin: 0.05 }),
-      /* @__PURE__ */ E.jsx(K1, { lr: "l", clicktriger: () => {
+      /* @__PURE__ */ E.jsx(AP, { ref: a, imgurl: l, width: r[0], height: r[0], setmergin: 0.05 }),
+      /* @__PURE__ */ E.jsx(Z1, { lr: "l", clicktriger: () => {
         a.current("l", "l");
       } }),
-      /* @__PURE__ */ E.jsx(K1, { lr: "r", clicktriger: () => {
+      /* @__PURE__ */ E.jsx(Z1, { lr: "r", clicktriger: () => {
         a.current("r", "r");
       } })
     ] }),
     /* @__PURE__ */ E.jsx("div", { style: { width: "100%", height: "2em", backgroundColor: "" } })
   ] });
-}, LP = S.forwardRef((t, e) => {
+}, AP = S.forwardRef((t, e) => {
   const n = S.useState(!1), r = S.useState(!1);
   var i = 0, o = 1, l = t.imgurl.length - 1;
   console.log(t.imgurl), S.useImperativeHandle(
@@ -13190,7 +13190,7 @@ const q1 = S.createContext(null), OP = (t) => {
     }
   ));
   return /* @__PURE__ */ E.jsx(E.Fragment, { children: p });
-}), K1 = (t) => {
+}), Z1 = (t) => {
   const e = S.useState(0);
   t.lr, S.useEffect(() => {
   });
@@ -13227,7 +13227,7 @@ const q1 = S.createContext(null), OP = (t) => {
     ...r,
     ...o
   } });
-}, NP = () => {
+}, LP = () => {
   const [t, e] = S.useState(!1), n = (r) => {
     e(!0);
   };
@@ -13240,8 +13240,8 @@ const q1 = S.createContext(null), OP = (t) => {
       window.removeEventListener("load", n);
     };
   }, []), t;
-}, IP = (t) => {
-  const e = NP(), n = {
+}, NP = (t) => {
+  const e = LP(), n = {
     position: "fixed",
     width: "100%",
     top: 0,
@@ -13315,10 +13315,10 @@ const q1 = S.createContext(null), OP = (t) => {
         top: `${window.innerHeight / 2 - 10}px`,
         left: `${window.innerWidth / 2 - 200}px`
       } }),
-      /* @__PURE__ */ E.jsx(jP, { phonestate: r, opa_r: f }),
+      /* @__PURE__ */ E.jsx(zP, { phonestate: r, opa_r: f }),
       /* @__PURE__ */ E.jsx("div", { className: "gearL", style: { ...d, width: r[0] ? "100px" : "300px", height: r[0] ? "100px" : "300px", right: r[0] ? "-35px" : "-100px", bottom: r[0] ? "-20px" : "-80px" } }),
       /* @__PURE__ */ E.jsx("div", { className: "gearS", style: { ...d, width: `${(r[0] ? 1 / 3 : 1) * 500}px`, height: `${(r[0] ? 1 / 3 : 1) * 500}px`, right: `${-200 * (r[0] ? 0.25 : 1)}px`, bottom: `${-25 * (r[0] ? 0.1 : 1)}px` } }),
-      /* @__PURE__ */ E.jsx(zP, { loadingstate: u, phonestate: r })
+      /* @__PURE__ */ E.jsx(IP, { loadingstate: u, phonestate: r })
     ] }),
     /* @__PURE__ */ E.jsxs("svg", { style: { ...n, zIndex: 1012 }, children: [
       /* @__PURE__ */ E.jsx("rect", { x: "0", y: "0", width: "100%", height: "100%", fill: "rgba(200,255,255,1)", style: { mask: "url(#mask)" } }),
@@ -13329,7 +13329,7 @@ const q1 = S.createContext(null), OP = (t) => {
       ] })
     ] })
   ] });
-}, zP = (t) => {
+}, IP = (t) => {
   const n = t.phonestate[0] ? 50 : 200, r = t.loadingstate, i = se({
     opacity: r[0] ? 0.5 : 0,
     delay: 1e3
@@ -13373,7 +13373,7 @@ const q1 = S.createContext(null), OP = (t) => {
     backgroundImage: 'url("https://3.bp.blogspot.com/-rOvA6A1E6NA/VJF_SS2Lb8I/AAAAAAAAp1E/PphqZFh5pLY/s800/ball01_red.png")',
     backgroundSize: "cover"
   } });
-}, jP = (t) => {
+}, zP = (t) => {
   const e = t.phonestate, n = e[0] ? 50 : 150, r = S.useState(!1), i = se({
     rotate: r[0] ? 1800 : 0
     // ,opacity:spinswitch[0]?0.5:1
@@ -13407,14 +13407,14 @@ const q1 = S.createContext(null), OP = (t) => {
     /* @__PURE__ */ E.jsx(fe.path, { strokeWidth: 5, d: `M${n / 2},${n / 15 * 3} L${n * 0.1},${n / 3} Z`, style: { x: "0", y: l[0].x.to({ range: [0, 10], output: [0, 20] }), fill: "rgba(200,200,100,.6)", stroke: "rgba(200,255,200,1)" } }),
     /* @__PURE__ */ E.jsx(fe.path, { strokeWidth: 5, d: `M${n / 2 - 1},${n / 15 * 3} L${n - n * 0.1},${n / 3} Z`, style: { x: "0", y: l[0].x.to({ range: [0, 10], output: [0, 20] }), fill: "rgba(200,200,100,.6)", stroke: "rgba(100,255,100,1)" } })
   ] }) });
-}, $P = (t) => {
+}, jP = (t) => {
   const [e, n] = S.useState(!0);
   return S.useEffect(() => {
     setTimeout(() => n(!1), t);
   }, []), e;
-}, FP = (t) => {
+}, $P = (t) => {
   const e = ["私達の声明", "顧客様のニーズに沿ったウェブサービスを設計することを誓います。"], n = ["我々の使命", "より多くの存在をウェブデザインし、ウェブ上からその存在を発信できるようにします。"], r = ["企画・クリエイト", "社会に新しいシステムを創造することに常に向き合い続けます。"], i = ["サービス", "顧客とやりとりしやすい距離からの制作をさせて頂きます。"], l = S.useRef(null), a = [window.innerWidth, window.innerHeight];
-  $P(200);
+  jP(200);
   const s = se(
     () => ({
       from: { y: 0 },
@@ -13631,7 +13631,7 @@ const q1 = S.createContext(null), OP = (t) => {
       )
     ] })
   ] });
-}, UP = (t) => {
+}, FP = (t) => {
   const r = S.useRef(null), i = S.useRef(null), o = t.phonestate, l = () => {
     yi.timeline({
       scrollTrigger: {
@@ -13741,7 +13741,7 @@ const q1 = S.createContext(null), OP = (t) => {
       /* @__PURE__ */ E.jsx("div", { style: { width: "100%", height: "20vh" } }),
       t.children[1]
     ] }),
-    /* @__PURE__ */ E.jsx(BP, { ref: i, phonestate: o }),
+    /* @__PURE__ */ E.jsx(UP, { ref: i, phonestate: o }),
     /* @__PURE__ */ E.jsx("div", { className: "coma1", style: { ...s, left: `${a[0] * 0.1}px`, bottom: "-300px" } }),
     /* @__PURE__ */ E.jsx("div", { className: "coma1", style: { ...s, left: `${a[0] * 0.7}px`, bottom: "100px" } }),
     /* @__PURE__ */ E.jsx("div", { className: "coma2", style: { ...s, left: `${a[0] * 0.6}px`, bottom: "-130px" } }),
@@ -13749,7 +13749,7 @@ const q1 = S.createContext(null), OP = (t) => {
     /* @__PURE__ */ E.jsx("div", { className: "coma3", style: { ...s, left: `${a[0] * 0.8}px`, bottom: "30px" }, children: " " }),
     /* @__PURE__ */ E.jsx("div", { className: "coma3", style: { ...s, left: "-10%", bottom: "400px" } })
   ] }) });
-}, BP = S.forwardRef((t, e) => {
+}, UP = S.forwardRef((t, e) => {
   S.useImperativeHandle(
     e,
     () => (a, s) => (r[1](a), r[0])
@@ -13845,11 +13845,11 @@ const q1 = S.createContext(null), OP = (t) => {
         position: "relative",
         height: "82px"
       }, children: [
-        /* @__PURE__ */ E.jsx(Z1, { children: /* @__PURE__ */ E.jsx("div", { className: "imagecmp", style: {
+        /* @__PURE__ */ E.jsx(J1, { children: /* @__PURE__ */ E.jsx("div", { className: "imagecmp", style: {
           ...l,
           backgroundImage: 'url("https://github.githubassets.com/assets/apple-touch-icon-180x180-a80b8e11abe2.png")'
         } }) }),
-        /* @__PURE__ */ E.jsx(Z1, { children: /* @__PURE__ */ E.jsx("div", { className: "imagecmp", style: {
+        /* @__PURE__ */ E.jsx(J1, { children: /* @__PURE__ */ E.jsx("div", { className: "imagecmp", style: {
           ...l,
           backgroundColor: "white",
           backgroundImage: 'url("https://cdn.qiita.com/assets/public/push_notification/image-qiitan-572179a3bbde375850422ea48b2b6272.png")'
@@ -13857,7 +13857,7 @@ const q1 = S.createContext(null), OP = (t) => {
       ] }) })
     ] })
   ] });
-}), Z1 = (t) => {
+}), J1 = (t) => {
   const e = S.useState(!1), n = se({
     transform: e[0] ? "scale(1.2,1.2)" : "scale(1,1)"
   });
@@ -13874,7 +13874,7 @@ const q1 = S.createContext(null), OP = (t) => {
       children: t.children
     }
   );
-}, p2 = S.createContext({ lite: "bbb" }), VP = () => {
+}, p2 = S.createContext({ lite: "bbb" }), BP = () => {
   const [t, e] = S.useState(!1), n = () => e(!0);
   return S.useEffect(() => {
     if (document.readyState === "complete") {
@@ -13885,8 +13885,8 @@ const q1 = S.createContext(null), OP = (t) => {
       window.removeEventListener("load", n);
     };
   }, []), t;
-}, WP = S.forwardRef((t, e) => {
-  VP();
+}, VP = S.forwardRef((t, e) => {
+  BP();
   const n = S.useState(0), r = S.useState(0), i = S.useState([0, 0]), o = S.useState(!0), l = S.useRef(null);
   S.useContext(p2);
   var a = null;
@@ -13983,7 +13983,7 @@ const q1 = S.createContext(null), OP = (t) => {
 
 ` })
   ] });
-}), HP = (t) => {
+}), WP = (t) => {
   const [e, n] = S.useState([window.innerWidth / 2 - 100, window.innerHeight / 1.3]), r = S.useState([0, 0]), i = S.useRef(null);
   S.useState(!1);
   const o = S.useState(!1), l = Df({
@@ -14147,7 +14147,7 @@ const q1 = S.createContext(null), OP = (t) => {
     } }),
     /* @__PURE__ */ E.jsx("div", { style: { display: "inline-block", fontFamily: "'DotGothic16'" }, children: t.children })
   ] });
-}), YP = (t) => {
+}), HP = (t) => {
   const [e, n] = S.useState([1e3, 300]), r = S.useState(!0), i = S.useState(0), o = S.useState(0), l = Df({
     rootMargin: "2px",
     triggerOnce: !1
@@ -14155,8 +14155,8 @@ const q1 = S.createContext(null), OP = (t) => {
   S.useEffect(() => {
     screen.availWidth < 500 || window.innerWidth < 500 ? (r[1](!0), n([window.innerWidth * 1, window.innerHeight * 0.6]), i[1](0), o[1](window.innerHeight / 2 - window.innerHeight * 0.6 / 2)) : (r[1](!1), n([window.innerWidth / 2 - 240, window.innerHeight / 2]), i[1](150), o[1](window.innerHeight / 2 - window.innerHeight / 2 / 2));
   }, []);
-  const a = t.lr == "L" ? { left: `${i[0]}px` } : t.lr == "R" ? { right: `${i[0]}px` } : {}, s = t.children.slice(0, 4).map((d, p) => /* @__PURE__ */ E.jsx(J1, { fontsize: 0.5, i: p, title: d.title, link: d.link }));
-  t.children.slice(2).map((d, p) => /* @__PURE__ */ E.jsx(J1, { fontsize: 0.9, i: p, title: d.title, link: d.link }));
+  const a = t.lr == "L" ? { left: `${i[0]}px` } : t.lr == "R" ? { right: `${i[0]}px` } : {}, s = t.children.slice(0, 4).map((d, p) => /* @__PURE__ */ E.jsx(ev, { fontsize: 0.5, i: p, title: d.title, link: d.link }));
+  t.children.slice(2).map((d, p) => /* @__PURE__ */ E.jsx(ev, { fontsize: 0.9, i: p, title: d.title, link: d.link }));
   const u = se(() => ({
     from: { backgroundSize: "50px", backgroundPosition: "0px 0px" },
     to: { backgroundSize: "50.5px", backgroundPosition: "-1px -1px" },
@@ -14214,7 +14214,7 @@ const q1 = S.createContext(null), OP = (t) => {
     }, children: "残りのログ" }),
     /* @__PURE__ */ E.jsx(fe.div, { style: { position: "relative", top: "0" } })
   ] });
-}, J1 = (t) => {
+}, ev = (t) => {
   const e = S.useRef(null), n = S.useState(!0), r = S.useState(!1), i = se(() => ({
     from: { transform: "scale(1,1)", backgroundColor: "rgba(220,220,220,1)" },
     config: {
@@ -14277,9 +14277,9 @@ const q1 = S.createContext(null), OP = (t) => {
       marginRight: "15px",
       overflow: "hidden"
     } }),
-    /* @__PURE__ */ E.jsx(XP, { text: t.title })
+    /* @__PURE__ */ E.jsx(YP, { text: t.title })
   ] }, `key${t.i}`) });
-}, XP = (t) => {
+}, YP = (t) => {
   const e = S.useState(!1), n = S.useState(!0), r = se(
     {
       color: e[0] ? "blue" : "black",
@@ -14306,7 +14306,7 @@ const q1 = S.createContext(null), OP = (t) => {
   }, children: i });
 };
 yi.registerPlugin(me);
-const ev = S.createContext(null), tv = (t) => {
+const tv = S.createContext(null), XP = (t) => {
   const e = S.useState(!1);
   S.useState(!1);
   const n = S.useRef(null);
@@ -14323,17 +14323,17 @@ const ev = S.createContext(null), tv = (t) => {
     { link: "/", title: "サイト3オープン" },
     { link: "/", title: "" }
   ], o = S.useRef(null);
-  return S.useContext(ev), /* @__PURE__ */ E.jsx(ev.Provider, { value: { viewent: o }, children: /* @__PURE__ */ E.jsxs("div", { className: "base", ref: n, style: { overflow: "hidden", padding: "0px", margin: "0px", textAlign: "center" }, children: [
+  return S.useContext(tv), /* @__PURE__ */ E.jsx(tv.Provider, { value: { viewent: o }, children: /* @__PURE__ */ E.jsxs("div", { className: "base", ref: n, style: { overflow: "hidden", padding: "0px", margin: "0px", textAlign: "center" }, children: [
     /* @__PURE__ */ E.jsx(h2, { phonestate: e }),
-    /* @__PURE__ */ E.jsx(IP, { phonestate: e }),
+    /* @__PURE__ */ E.jsx(NP, { phonestate: e }),
     /* @__PURE__ */ E.jsxs(QP, { className: "aboutcomp2", children: [
-      /* @__PURE__ */ E.jsx(WP, { ref: o, lr: "L" }),
-      /* @__PURE__ */ E.jsx(HP, { lr: "R", setfunc: o })
+      /* @__PURE__ */ E.jsx(VP, { ref: o, lr: "L" }),
+      /* @__PURE__ */ E.jsx(WP, { lr: "R", setfunc: o })
     ] }),
-    /* @__PURE__ */ E.jsx(FP, { phonestate: e, className: "aboutcomp" }),
-    /* @__PURE__ */ E.jsxs(UP, { phonestate: e, className: "productcomp4", children: [
-      /* @__PURE__ */ E.jsx(GP, { ht: "800", delay: 200, children: /* @__PURE__ */ E.jsx(YP, { lr: "F", children: i }) }),
-      /* @__PURE__ */ E.jsx(AP, { width: "", children: " " })
+    /* @__PURE__ */ E.jsx($P, { phonestate: e, className: "aboutcomp" }),
+    /* @__PURE__ */ E.jsxs(FP, { phonestate: e, className: "productcomp4", children: [
+      /* @__PURE__ */ E.jsx(GP, { ht: "800", delay: 200, children: /* @__PURE__ */ E.jsx(HP, { lr: "F", children: i }) }),
+      /* @__PURE__ */ E.jsx(DP, { width: "", children: " " })
     ] }),
     /* @__PURE__ */ E.jsx("style", { children: `
    @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
@@ -16925,15 +16925,15 @@ const m5 = Ud.createRoot(p5), g5 = r5(
   [
     {
       path: "/",
-      element: /* @__PURE__ */ E.jsx(tv, { namebox: ["このサイトについて", "依頼の流れ", "制作例", "リンク"], children: " " })
+      element: /* @__PURE__ */ E.jsx(XP, { namebox: ["このサイトについて", "依頼の流れ", "制作例", "リンク"], children: " " })
     },
     {
       path: "/irai",
-      element: /* @__PURE__ */ E.jsx(OP, { children: " " })
+      element: /* @__PURE__ */ E.jsx(K1, { children: " " })
     },
     {
       path: "/*",
-      element: /* @__PURE__ */ E.jsx(tv, { namebox: ["このサイトについて", "依頼の流れ", "制作例", "リンク"], children: " " })
+      element: /* @__PURE__ */ E.jsx(K1, { children: " " })
     }
   ],
   {
