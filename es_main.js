@@ -16923,15 +16923,15 @@ var wv;
 var p5 = document.getElementById("RomNav");
 const m5 = Ud.createRoot(p5), g5 = r5([
   {
-    path: "/",
+    path: "./",
     element: /* @__PURE__ */ E.jsx(tv, { namebox: ["このサイトについて", "依頼の流れ", "制作例", "リンク"], children: " " })
   },
   {
-    path: "/irai",
+    path: "./irai",
     element: /* @__PURE__ */ E.jsx(OP, { children: " " })
   },
   {
-    path: "*",
+    path: "./*",
     element: /* @__PURE__ */ E.jsx(tv, { namebox: ["このサイトについて", "依頼の流れ", "制作例", "リンク"], children: " " })
   }
 ]);
