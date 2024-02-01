@@ -12731,16 +12731,11 @@ const d2 = (t) => {
       {
         style: { opacity: s[0].y.to({ range: [0, 40, 70, 100], output: [0, 0.4, 0.7, 1] }), display: "inline-block" },
         children: r
-      }
+      },
+      i
     );
   });
-  return /* @__PURE__ */ E.jsx(
-    "div",
-    {
-      style: { display: "inline" },
-      children: n
-    }
-  );
+  return /* @__PURE__ */ E.jsx("div", { style: { display: "inline" }, children: n });
 }, Nu = (t) => {
   const e = {
     userSelect: "none",
@@ -12770,33 +12765,41 @@ const d2 = (t) => {
   });
   se({
     backgroundColor: i[0] ? "rgba(1,1,1,0)" : "black"
+    //,duration:40000
+    //,onResolve:()=>{console.log("aaaaa")}
   });
-  var l = null;
-  const a = () => {
-    clearTimeout(l), i[1](!0);
-  }, s = () => {
-    clearTimeout(l), l = window.setTimeout(() => {
+  const l = S.useState(null);
+  var a = null;
+  const s = () => {
+    clearTimeout(a), l[1](t.link), i[1](!0);
+  }, u = () => {
+    clearTimeout(a), a = window.setTimeout(() => {
       i[1](!1);
     }, 200);
   };
   S.useEffect(() => {
-    r.current.addEventListener("selectstart", (c) => {
-      c.preventDefault();
+    r.current.addEventListener("selectstart", (f) => {
+      f.preventDefault();
     }), screen.availWidth < 500 || window.innerWidth < 500 ? (r.current.addEventListener("touchstart", () => {
-      a();
-    }), r.current.addEventListener("touchend", () => {
       s();
+    }), r.current.addEventListener("touchend", () => {
+      u();
     })) : (r.current.addEventListener("click", () => {
       location.href = t.link;
     }), r.current.addEventListener("mouseenter", () => {
-      a();
-    }), r.current.addEventListener("mouseleave", () => {
       s();
+    }), r.current.addEventListener("mouseleave", () => {
+      u();
     }));
   }, []);
-  const u = se({
+  const c = se({
     x: i[0] ? "10em" : "0em",
-    duration: 1
+    config: {
+      duration: 350
+    },
+    onRest: (f, d, p, m) => {
+      i[0] && (location.href = l[0]);
+    }
   });
   return /* @__PURE__ */ E.jsxs(
     fe.div,
@@ -12811,8 +12814,8 @@ const d2 = (t) => {
       },
       children: [
         /* @__PURE__ */ E.jsx(fe.div, { style: { backgroundColor: "rgba(0,0,0,0)", ...o, ...n, zIndex: 8 }, children: /* @__PURE__ */ E.jsx(d2, { children: t.children }) }),
-        /* @__PURE__ */ E.jsx(fe.div, { style: { ...u, backgroundColor: "black", ...n, zIndex: 7 } }),
-        /* @__PURE__ */ E.jsx(fe.div, { style: { ...u, backgroundColor: "white", ...n, left: "-10em", zIndex: 7 } })
+        /* @__PURE__ */ E.jsx(fe.div, { style: { ...c, backgroundColor: "black", ...n, zIndex: 7 } }),
+        /* @__PURE__ */ E.jsx(fe.div, { style: { ...c, backgroundColor: "white", ...n, left: "-10em", zIndex: 7 } })
       ]
     }
   );
@@ -12850,7 +12853,7 @@ const d2 = (t) => {
     /* @__PURE__ */ E.jsx(fe.div, { className: "base2", style: { pointerEvents: "none", width: "100%", left: "0px", top: "3em", position: "fixed", margin: "0px", padding: "0px", zIndex: 1501, height: i, overflow: "hidden" }, children: /* @__PURE__ */ E.jsxs("div", { style: { zIndex: 501, margin: "0px", display: "inline-block", verticalAlign: "top", height: "100%", overflow: "hidden", position: "relative", pointerEvents: "none" }, children: [
       /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "ご案内" }),
       /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "活動紹介" }),
-      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./irai", children: "依頼報告" }),
+      /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./irai", children: "依頼" }),
       /* @__PURE__ */ E.jsx(Nu, { height: 3, link: "./", children: "スペシャルサンクス" })
     ] }) })
   ] });
@@ -12869,7 +12872,7 @@ const d2 = (t) => {
     backgroundColor: "rgba(240,240,240,1)",
     height: "94%",
     whiteSpace: "nowrap"
-  }, i = t.data.map((o) => /* @__PURE__ */ E.jsx(
+  }, i = t.data.map((o, l) => /* @__PURE__ */ E.jsx(
     fe.div,
     {
       style: { ...n },
@@ -12877,7 +12880,8 @@ const d2 = (t) => {
         location.href = `${o.url}`;
       },
       children: o.strurl
-    }
+    },
+    l
   ));
   return /* @__PURE__ */ E.jsx(fe.div, { style: { ...r, ...e[0] }, children: i });
 }, MP = (t) => {
@@ -13170,7 +13174,7 @@ const q1 = S.createContext(null), K1 = (t) => {
     () => {
       u[1](!0);
     }
-  ), p = t.imgurl.map((m) => /* @__PURE__ */ E.jsx(
+  ), p = t.imgurl.map((m, h) => /* @__PURE__ */ E.jsx(
     fe.div,
     {
       onMouseEnter: () => f(),
@@ -13187,7 +13191,8 @@ const q1 = S.createContext(null), K1 = (t) => {
         }, 300);
       },
       style: { ...c, ...s, backgroundImage: `url("${m.picurl}")` }
-    }
+    },
+    h
   ));
   return /* @__PURE__ */ E.jsx(E.Fragment, { children: p });
 }), Z1 = (t) => {
@@ -14155,7 +14160,7 @@ const q1 = S.createContext(null), K1 = (t) => {
   S.useEffect(() => {
     screen.availWidth < 500 || window.innerWidth < 500 ? (r[1](!0), n([window.innerWidth * 1, window.innerHeight * 0.6]), i[1](0), o[1](window.innerHeight / 2 - window.innerHeight * 0.6 / 2)) : (r[1](!1), n([window.innerWidth / 2 - 240, window.innerHeight / 2]), i[1](150), o[1](window.innerHeight / 2 - window.innerHeight / 2 / 2));
   }, []);
-  const a = t.lr == "L" ? { left: `${i[0]}px` } : t.lr == "R" ? { right: `${i[0]}px` } : {}, s = t.children.slice(0, 4).map((d, p) => /* @__PURE__ */ E.jsx(ev, { fontsize: 0.5, i: p, title: d.title, link: d.link }));
+  const a = t.lr == "L" ? { left: `${i[0]}px` } : t.lr == "R" ? { right: `${i[0]}px` } : {}, s = t.children.slice(0, 4).map((d, p) => /* @__PURE__ */ E.jsx(ev, { fontsize: 0.5, i: p, title: d.title, link: d.link }, p));
   t.children.slice(2).map((d, p) => /* @__PURE__ */ E.jsx(ev, { fontsize: 0.9, i: p, title: d.title, link: d.link }));
   const u = se(() => ({
     from: { backgroundSize: "50px", backgroundPosition: "0px 0px" },
@@ -14259,7 +14264,7 @@ const q1 = S.createContext(null), K1 = (t) => {
     height: "100%",
     width: "100%",
     backgroundColor: "",
-    overflowWrap: "break-word;",
+    overflowWrap: "break-word",
     boxSizing: "border-box",
     display: "block",
     fontSize: `${n[0] ? t.fontsize * 0.6 : t.fontsize}em`
