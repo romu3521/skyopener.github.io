@@ -11355,13 +11355,13 @@ const xT = (t) => {
     bottom: e[0] ? "25%" : "40%",
     right: e[0] ? "2px" : "5%"
   }, s = {
-    right: "10px"
+    right: "30vw"
   }, a = {
-    left: "10px"
+    left: "30vw"
   }, u = {
-    left: "10px"
+    left: "30vw"
   }, c = {
-    right: "10px"
+    right: "30vw"
   }, f = Object.assign(t.part == "1st" ? r : t.part == "2nd" ? i : t.part == "3rd" ? o : t.part == "4th" ? l : {}), h = Object.assign(t.part == "1st" ? s : t.part == "2nd" ? a : t.part == "3rd" ? u : t.part == "4th" ? c : {}), d = Object.assign(t.part == "1st" ? { top: "2em", textAlign: "right" } : t.part == "2nd" ? { top: "2em", textAlign: "left" } : t.part == "3rd" ? { bottom: e[0] ? "1em" : "2em", textAlign: "left" } : t.part == "4th" ? { bottom: e[0] ? "1em" : "2em", textAlign: "right" } : {}), g = cf({
     rootMarginLeft: "1000px",
     threshold: 0.2,
@@ -12526,7 +12526,7 @@ const p1 = k.createContext(null), OT = (t) => {
   }, f = K({
     lighting: i ? 1 : 0
   }), h = [
-    { strurl: "サイトオープン", url: "/" },
+    { strurl: "サイトオープン", url: `${e}/` },
     { strurl: "テストページ", url: `${e}/article/0` }
   ];
   return k.useEffect(() => {
