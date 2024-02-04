@@ -11000,19 +11000,19 @@ var lT = /^(matrix|translate|scale|rotate|skew)/, sT = /^(translate)/, aT = /^(r
 ur.assign({ batchedUpdates: t_.unstable_batchedUpdates, createStringInterpolator: Fx, colors: tE });
 var dT = AE(fT, { applyAnimatedValues: rT, createAnimatedStyle: (t) => new uT(t), getComponentProps: ({ scrollTop: t, scrollLeft: e, ...n }) => n }), K = dT.animated;
 const hT = (t) => {
-  const e = S.useRef(null), n = S.useState(!1), [r, i] = S.useState([window.innerWidth, window.innerHeight]);
+  const e = S.useRef(null), n = t.phonestate, [r, i] = S.useState([window.innerWidth, window.innerHeight]);
   S.useEffect(() => {
     window.setTimeout(() => {
       i([e.current.clientWidth, window.innerHeight]);
-    }, 300), screen.availWidth < 500 || window.innerWidth < 500 ? n[1](!0) : n[1](!1);
+    }, 300);
   }, []), S.useEffect(() => {
   }, [r]);
   const o = {
-    width: "100%",
+    width: n[0] ? "100%" : "50%",
     height: `${r[0] * 1}px`,
     position: "relative",
-    backgroundColor: "rgba(1,1,1,0)",
-    textAlign: "center"
+    textAlign: "center",
+    display: "inline-block"
   }, l = [
     { picurl: "https://user0514.cdnw.net/shared/img/thumb/hana-ikeda_FP03499-497_TP_V.jpg", url: "/" },
     { picurl: "https://user0514.cdnw.net/shared/img/thumb/rinmon625-9597_TP_V.jpg", url: "/" },
@@ -11023,7 +11023,6 @@ const hT = (t) => {
   return /* @__PURE__ */ w.jsxs(w.Fragment, { children: [
     /* @__PURE__ */ w.jsxs("div", { ref: e, style: {
       ...o,
-      overflow: "hidden",
       whiteSpace: "nowrap"
     }, children: [
       /* @__PURE__ */ w.jsx(pT, { ref: s, imgurl: l, width: r[0], height: r[0], setmergin: 0.05 }),
@@ -11037,17 +11036,19 @@ const hT = (t) => {
     /* @__PURE__ */ w.jsx("div", { style: { width: "100%", height: "2em", backgroundColor: "" } })
   ] });
 }, pT = S.forwardRef((t, e) => {
-  const n = S.useState(!1), r = S.useState(!1);
-  var i = 0, o = 1, l = t.imgurl.length - 1;
-  console.log(t.imgurl), S.useImperativeHandle(
-    e,
-    () => (g, p) => (g == "s" && n[1](!0), console.log("最大値", l), console.log(o), g == "l" ? o <= 0 ? (i = t.width * (-l + 1), s[1]({ x: i }), o = l) : (s[1]({ x: i += t.width }), o--) : g == "r" && (o >= l ? (i = 0, s[1]({ x: i }), o = 1) : (s[1]({ x: i -= t.width }), o++)), 1)
+  const n = S.useState(!1), r = S.useState(!1), i = ee(
+    (g) => (console.log(t.width * -parseInt(t.imgurl.length / 2)), console.log(g), {
+      x: 0
+    })
   );
-  const s = ee(
-    () => ({ x: 0 })
-  ), a = {
-    ...s[0],
-    left: `${-t.width}px`,
+  var o = 0, l = parseInt((t.imgurl.length - 1) / 2), s = t.imgurl.length - 1;
+  console.log(l), S.useImperativeHandle(
+    e,
+    () => (g, p) => (g == "s" && n[1](!0), console.log("最大値", s), console.log(l), g == "l" ? (l--, l < 0 ? (o = t.width * -parseInt(t.imgurl.length / 2), i[1]({ x: o }), l = s) : i[1]({ x: o += t.width })) : g == "r" && (l++, l > s ? (o = t.width * parseInt((t.imgurl.length - 1) / 2), i[1]({ x: o }), l = 0) : i[1]({ x: o -= t.width })), 1)
+  );
+  const a = {
+    ...i[0],
+    left: `${-t.width * l}px`,
     marginLeft: `${t.width * t.setmergin / 2}px`,
     marginRight: `${t.width * t.setmergin / 2}px`,
     width: `${t.width * (1 - t.setmergin)}px`,
@@ -11576,7 +11577,6 @@ const $0 = (t) => {
     backgroundSize: "100vw 300vh",
     width: "100vw",
     height: "100vh",
-    backgroundColor: "rgba(100,100,100,.9)",
     position: "relative",
     zIndex: 10
   }, children: [
@@ -11584,15 +11584,20 @@ const $0 = (t) => {
       boxShadow: "10px 5px 5px black",
       paddingTop: "100px",
       minWidth: "300px",
-      width: `${o[0] ? s[0] - 20 : s[0] * 0.4}px`,
+      boxSizing: "border-box",
+      width: `${o[0] ? s[0] + 0 : s[0] * 0.4}px`,
       height: `${200 + 100}vh`,
-      left: `${o[0] ? 5 : s[0] * 0.3}px`,
+      left: `${o[0] ? 0 : s[0] * 0.33}px`,
       backgroundColor: "rgba(60,60,200,0.9)",
       position: "absolute",
       zIndex: 2
     }, children: [
       t.children[0],
-      /* @__PURE__ */ w.jsx("div", { style: { width: "100%", height: "20vh" } }),
+      /* @__PURE__ */ w.jsx("div", { style: {
+        width: "100%",
+        height: "20vh",
+        textAlign: "center"
+      } }),
       t.children[1]
     ] }),
     /* @__PURE__ */ w.jsx(ST, { ref: i, phonestate: o }),
@@ -12180,7 +12185,7 @@ const g1 = S.createContext(null), OT = (t) => {
     /* @__PURE__ */ w.jsx(wT, { phonestate: e, className: "aboutcomp" }),
     /* @__PURE__ */ w.jsxs(kT, { phonestate: e, className: "productcomp4", children: [
       /* @__PURE__ */ w.jsx(RT, { ht: "800", delay: 200, children: /* @__PURE__ */ w.jsx(bT, { lr: "F", children: i }) }),
-      /* @__PURE__ */ w.jsx(hT, { width: "", children: " " })
+      /* @__PURE__ */ w.jsx(hT, { phonestate: e, width: "", children: " " })
     ] }),
     /* @__PURE__ */ w.jsx("style", { children: `
    @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
